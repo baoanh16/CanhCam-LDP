@@ -13,7 +13,47 @@
 	.logo
 		width: 200px
 		margin-right: 50px
-	
+	@media (max-width: 1199.98px)
+		height: 80px
+		.header-container
+			padding: 0 0
+			position: fixed
+			top: 80px
+			left: 0
+			transform: translateX(-100%)
+			transition: all .15s ease-out
+			&.active
+				transform: translateX(0)
+			.logo
+				display: none
+			.main-nav,.language
+				ul
+					li
+						border-bottom: 1px solid rgba(255,255,255,0.2)
+						transform: translateX(-100%)
+						background: map-get($mau, main)
+						&.transformActive
+							transform: translateX(0)
+							transition: all .25s linear
+						a
+							height: 60px
+							text-transform: uppercase
+							color: white
+							display: flex
+							justify-content: center
+							align-items: center
+							font-size: 13px
+			.language
+				ul
+					li
+						background: white
+						a
+							color: #54452F
+							font-size: 13px
+						&.active
+							background: #54452F
+							a
+								color: white
 	@media (min-width: 1200px)
 		.header-container
 			height: 80px

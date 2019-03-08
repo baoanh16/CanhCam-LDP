@@ -1,11 +1,15 @@
 @import "font.css"
 @import "grid.css"
 @import "./src/components/_core/color.sass"
+@import "../../bower_components/swiper/dist/css/swiper.min.css"
 @import "header/index.sass"
 @import "footer/index.sass"
 
+// Fonts
+.fa-angle-up:before
+	content: "\f106"
 
-
+// Animation
 @keyframes fadeInDown
 	from
 		opacity: 0
@@ -15,20 +19,81 @@
 		opacity: 1
 		-webkit-transform: translate3d(0, 0, 0)
 		transform: translate3d(0, 0, 0)
+
 .fadeInDown
 	animation-name: fadeInDown
-
 
 @keyframes zoomIn
 	from
 		transform: scale(1)
 	to
 		transform: scale(1.1)
+
 .zoomIn
 	animation-name: zoomIn
+// Css
+ul
+	padding-left: 0
+	list-style-type: none
+	margin-bottom: 0
 
+.col-12
+	flex: 0 0 100%
+	max-width: 100%
+	padding: 0 15px
 main
-	min-height: 8000px
-// Fonts
-.fa-angle-up:before
-	content: "\f106"
+	overflow-x: hidden
+	@media (max-width: 1199.9px)
+		padding-top: 80px
+body
+	&.over-hidden
+		@media (max-width: 1199.9px)
+			overflow: hidden
+.main-nav-toggle
+	display: none
+	@media (max-width: 1199.9px)
+		display: block
+		position: absolute
+		width: 33px
+		height: 33px
+		top: 23px
+		left: 15px
+		span
+			&:nth-child(1),&:nth-child(2),&:nth-child(3)
+				width: 33px
+				height: 3px
+				display: block
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				transition: all .25s linear
+			&:nth-child(1)
+				top: 15px
+			&:nth-child(2)
+				background: map-get($mau, main)
+				top: 23px
+			&:nth-child(3)
+				background: map-get($mau, main)
+				top: 7px
+			&:nth-child(1)
+				&:before,&:after
+					width: 33px
+					height: 3px
+					background: map-get($mau, main)
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					content: ''
+					transition: all .25s linear
+		&.active
+			span
+				&:nth-child(2),&:nth-child(3)
+					top: 15px
+					opacity: 0
+					width: 0
+				&:nth-child(1)
+					&:before
+						transform: rotate(45deg)
+					&:after
+						transform: rotate(-45deg)

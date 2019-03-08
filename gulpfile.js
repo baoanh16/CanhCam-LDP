@@ -80,6 +80,7 @@ gulp.task('copyImages', function () {
 // Task watch
 gulp.task('serve', function () {
 	browserSync.init({
+		notify: false,
 		server: {
 			baseDir: './dist',
 		},

@@ -1,1 +1,275 @@
-@import ../../components/home-1/index
+.progress-bar
+	background: #ff2c00
+	height: 3px
+	z-index: 9999
+	top: 0
+	left: 0
+	width: 0%
+	position: fixed
+	transition: all .1s linear
+	opacity: 0
+.home-1
+	position: relative
+	color: white
+	.background
+		overflow: hidden
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		img
+			width: 100%
+			animation-duration: 9s
+			animation-fill-mode: both
+			animation-timing-function: linear
+			animation-delay: 0.2s
+	@media (max-width: 1199.9px)
+		.caption
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			h1
+				font-size: 24px
+				line-height: 30px
+				font-weight: 300
+				text-align: center
+	@media (min-width: 1200px)
+		height: 767px
+		.background
+			height: 100%
+		.caption
+			position: absolute
+			top: 0
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			.custom-container
+				display: flex
+			h1
+				font-size: 48px
+				line-height: 54px
+				min-width: 640px
+				margin-bottom: 0
+				flex: 0 0 36%
+				letter-spacing: -0.1rem
+				animation-duration: 1.2s
+				animation-fill-mode: both
+				animation-timing-function: ease
+				animation-delay: 1s
+
+.home-2
+	padding: 80px 0
+	text-align: center
+	position: relative
+	>.row
+		max-width: 1140px
+		margin: 0 auto
+	.title
+		color: #222222
+		font-size: 18px
+		font-weight: 500
+		letter-spacing: 1px
+		text-transform: uppercase
+		line-height: 20px
+		margin-bottom: 20px
+	h2
+		letter-spacing: -0.05rem
+		font-weight: 600
+		max-width: 740px
+		margin: 0 auto
+		margin-bottom: 20px
+		font-size: 40px
+		line-height: 44px
+	p
+		font-size: 18px
+		line-height: 26px
+		font-weight: 300
+		margin: 0 auto
+		margin-top: 10px
+		margin-bottom: 20px
+		max-width: 730px
+		strong, p
+			font-weight: 700
+	.background
+		position: absolute
+		bottom: 0
+		right: 0
+		img
+			width: 100%
+	.drone
+		position: absolute
+		left: 40px
+		bottom: 0
+		// transform: translateY(-100%)
+		z-index: 9
+	@media (max-width: 1199.98px)
+		.background
+			width: 300px
+	@media (max-width: 991.9px)
+		padding: 40px 0 90px
+		h2
+			font-size: 20px
+			line-height: 24px
+		p
+			text-align: justify
+		.drone
+			display: none
+		.background
+			width: 180px
+.home-3
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+	display: flex
+	align-items: center
+	.caption
+		width: 640px
+		color: white
+		@media (max-width: 1199.9px)
+			max-width: 50%
+		.title
+			letter-spacing: -0.05rem
+			font-weight: 600
+			max-width: 740px
+			margin-bottom: 20px
+			font-size: 40px
+			line-height: 44px
+		ul, p
+			font-weight: 300
+			font-size: 24px
+			line-height: 30px
+			li
+				margin-bottom: 14px
+		strong
+			font-weight: 700
+	
+	@media (max-width: 991.9px)
+		background-position: center!important
+		padding: 40px 0 90px
+		.caption
+			.title
+				font-size: 20px
+				line-height: 24px
+			ul, p
+				font-weight: 300
+				font-size: 20px
+				line-height: 26px
+.home-4
+	padding: 80px 0px
+	text-align: center
+	.custom-container
+		.row
+			justify-content: center
+			max-width: 1140px
+			margin: 0 auto
+			&:nth-child(2)
+				padding: 30px 0px 0px
+	h2
+		font-weight: 200
+		letter-spacing: -0.1rem
+		margin-bottom: 20px
+		font-size: 48px
+		line-height: 54px
+	p
+		font-size: 18px
+		line-height: 26px
+		font-weight: 300
+		margin: 10px auto 20px auto
+		max-width: 730px
+	strong
+		font-weight: 700
+	.item
+		flex: 0 0 50%
+		max-width: 50%
+		padding: 0 15px
+		@media (min-width: 992px)
+			flex: 0 0 25%
+			max-width: 25%
+		figure
+			margin-bottom: 16px
+			@media (min-width: 992px)
+				margin-bottom: 0
+			img
+				width: 100%
+			figcaption
+				h4 
+					letter-spacing: -0.02rem
+					font-size: 24px
+					line-height: 36px
+					font-weight: 400
+					margin-top: 10px
+					margin-bottom: 10px
+.home-5
+	padding: 80px 0px
+	display: block
+	.col-12
+		>h2
+			font-weight: 200
+			letter-spacing: -0.1rem
+			margin-bottom: 20px
+			font-size: 48px
+			line-height: 54px
+			text-align: center
+	&.f_1
+		.row
+			max-width: 1440px
+			margin: 0 auto
+		.swiper-container
+			.swiper-slide
+				padding: 20px 30px
+				transition: all .3s ease-out
+				img
+					border-radius: 8px
+					overflow: hidden
+					width: 100%
+					box-shadow: 0 0 20px rgba(0,0,0,.2)
+			.swiper-navigation
+				[class*="swiper-button-"]
+					background: none
+					background: black
+					width: 35px
+					height: 35px
+					display: flex
+					justify-content: center
+					align-items: center
+					&:before
+						display: inline-block
+						font: normal normal normal 24px/1 "Material Design Icons"
+						font-size: inherit
+						text-rendering: auto
+						line-height: inherit
+						-webkit-font-smoothing: antialiased
+						-moz-osx-font-smoothing: grayscale
+						color: white
+						font-size: 30px
+						color: white
+				.swiper-button-prev
+					&:before
+						content: '\f141'
+				.swiper-button-next
+					&:before
+						content: '\f142'
+	&.f_2
+		.row
+			max-width: 1140px
+			margin: 0 auto
+		.item
+			flex: 0 0 50%
+			max-width: 50%
+			padding: 10px
+			img
+				width: 100%
+			@media (min-width: 576px)
+				flex: 0 0 33.3333%
+				max-width: 33.3333%
+			@media (min-width: 768px)
+				flex: 0 0 25%
+				max-width: 25%
+			@media (min-width: 922px)
+				flex: 0 0 16.6666%
+				max-width: 16.6666%
