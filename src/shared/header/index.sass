@@ -1,0 +1,73 @@
+.ldp-header
+	box-shadow: 0px 5px 20px 4px rgba(0,0,0,0.05)
+	background: white
+	animation-duration: 1s
+	animation-fill-mode: both
+	animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1)
+	animation-delay: 0.5s
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 10
+	.logo
+		width: 200px
+		margin-right: 50px
+	
+	@media (min-width: 1200px)
+		.header-container
+			height: 80px
+			display: flex
+			align-items: center
+		.main-nav
+			flex-basis: 0
+			flex-grow: 1
+			ul
+				width: 100%
+				display: flex
+				padding-left: 0
+				list-style-type: none
+				li
+					padding: 0 10px
+					a
+						font-size: 14px
+						font-weight: 400
+						color: darken(white,40%)
+						text-decoration: none
+						text-transform: uppercase
+						transition: .3s all linear
+						white-space: nowrap
+						&:hover,&.active
+							color: map-get($mau, main)
+		.language
+			margin-left: auto
+			ul
+				width: 100%
+				display: flex
+				align-items: center
+				padding-left: 0
+				list-style-type: none
+				li
+					line-height: 1
+					a
+						display: flex
+						justify-content: center
+						align-items: center
+						padding: 3px 8px
+						font-size: 12px
+						font-weight: 400
+						color: darken(white,40%)
+						text-decoration: none
+						text-transform: uppercase
+						transition: .3s all linear
+						&:hover
+							color: map-get($mau, main)
+					&.active
+						background: #f3f2f2
+						a
+							font-size: 13px
+	@media (min-width: 1440px)
+		.main-nav
+			ul
+				li
+					padding: 0 20px
