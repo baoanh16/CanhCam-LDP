@@ -1,2 +1,25 @@
 footer
 	background: black
+	.row
+		justify-content: space-between
+		align-items: center
+		color: white
+		text-transform: uppercase
+	.left
+		font-weight: 300
+		font-size: 13px
+		display: flex
+		padding: 10px 70px
+		p
+			font-style: italic
+		a
+			margin-left: 32px
+			color: white
+			text-decoration: none
+	.right
+		a
+			display: inline-block
+			color: white
+			margin-left: 32px
+			&:hover
+				color: map-get($mau,main)

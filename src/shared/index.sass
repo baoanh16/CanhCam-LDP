@@ -8,6 +8,16 @@
 // Fonts
 .fa-angle-up:before
 	content: "\f106"
+.mdi-quote-close:before
+	content: "\f27e"
+
+.fa-facebook-f:before
+	content: "\f39e"
+.fa-twitter:before
+	content: "\f099"
+.fa-youtube:before
+	content: "\f167"
+
 
 // Animation
 @keyframes fadeInDown
@@ -41,6 +51,21 @@ ul
 	flex: 0 0 100%
 	max-width: 100%
 	padding: 0 15px
+.col-md-6
+	@media (min-width: 768px)
+		flex: 0 0 50%
+		max-width: 50%
+		padding: 0 15px
+.col-lg-8
+	@media (min-width: 992px)
+		flex: 0 0 66.6666%
+		max-width: 66.6666%
+		padding: 0 15px
+.col-lg-4
+	@media (min-width: 992px)
+		flex: 0 0 33.3333%
+		max-width: 33.3333%
+		padding: 0 15px
 main
 	overflow-x: hidden
 	@media (max-width: 1199.9px)
@@ -97,3 +122,27 @@ body
 						transform: rotate(45deg)
 					&:after
 						transform: rotate(-45deg)
+.backtotop
+	position: fixed
+	bottom: 0
+	right: 0
+	width: 55px
+	height: 55px
+	z-index: 1
+	background: #ff2c00
+	display: flex
+	align-items: center
+	justify-content: center
+	color: white
+	cursor: pointer
+	transition: all .25s ease-out
+	&:hover
+		background: #d60000
+	img
+		width: 25px
+	.v-align
+		display: flex
+		flex-direction: column
+		color: #fff
+		font-size: 12px
+		text-align: center

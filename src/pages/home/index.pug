@@ -13,7 +13,7 @@ block main
 		.caption
 			.custom-container
 				h1 Thiết kế website E-commerce theo xu hướng của thế giới cùng giải pháp bán hàng lý tưởng
-	section.home-2
+	section.home-2.f_1
 		.row
 			.col-12
 				.title CÁNH CAM WEB DESIGN AGENCY
@@ -99,7 +99,7 @@ block main
 							.swiper-button-prev
 							.swiper-button-next
 	section.home-5.f_2
-		.custom-container
+		.container
 			.row
 				.col-12
 					h2 Khách hàng của Cánh Cam
@@ -107,3 +107,78 @@ block main
 				- for(i = 0;i<30;i++)
 					.item
 						img(src="/img/partner.png", alt="")
+	section.home-2.f_2(class="parallax-window" data-parallax="scroll" data-image-src="/img/bg_wood2.jpg")
+		.row
+			.col-12
+				.title Testimonial
+				san.mdi.mdi-quote-close
+				h3 Nền tảng kỹ thuật của website SonyCenter được xây dựng vững, nên rất ít khi có lỗi, đặc biệt về mặt bảo mật, web luôn đáp ứng được chuẩn cao nhất từ tập đoàn Sony đề ra khi vận hành website e-commerce. Ngoài ra, đội ngũ Cánh Cam đã đáp ứng tốt những hỗ trợ về kỹ thuật &amp; tư vấn vận hành, việc này giúp website ổn định, xử lý sự cố được nhanh chóng, đảm bảo sự hài lòng cho khách hàng của chúng tôi.
+				span ...
+				p
+					strong Lý Anh Quân 
+					| Sony Center Management - South Sales Dept.
+	section.contact
+		.container
+			.row
+				.col-lg-4
+					h2 Liên hệ
+					h4 CÁNH CAM AGENCY
+					p 
+						span 156 Nguyễn Văn Thủ, Quận 1, Tp. HCM
+						span Hotline: 028 6273 0815
+					a(href="mailto:info@canhcam.vn") info@canhcam.vn
+				.col-lg-8
+					.Module.Module-160
+						.ModuleContent
+							div
+								.wrap-form
+									div
+										.form-wrapper.row
+											.col-md-6
+												.form-group.qtext.require
+													input(placeholder='Họ và tên...')
+													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Họ và tên....
+												.form-group.qtext.require
+													input(placeholder='Email...')
+													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Email....
+												.form-group.qtext.require
+													input(placeholder='Số điện thoại...')
+													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Số điện thoại....
+												.form-group.qtext.require
+													select
+														option(value="") Bạn biết đến cánh cam như thế nào?
+														option(value="") Bạn biết đến cánh cam như thế nào?
+														option(value="") Bạn biết đến cánh cam như thế nào?
+														option(value="") Bạn biết đến cánh cam như thế nào?
+														option(value="") Bạn biết đến cánh cam như thế nào?
+													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Tiêu đề....
+											.col-md-6
+												.form-group.qparagraph.require
+													textarea(placeholder='Nội dung...')
+													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Nội dung....
+												.form-group.qparagraph.require
+													p * Vui lòng điền vào tất cả các trường được đánh dấu *
+												//- .captcha-wrapper
+												//- 	.form-group.frm-captcha
+												//- 		.frm-captcha-input
+												//- 			label.label Nhập mã hiển thị
+												//- 			input(placeholder='Nhập mã hiển thị')
+												//- 		.RadCaptcha.RadCaptcha_Default(style='width:50%;')
+												//- 			span(style='visibility:hidden;') Mã không đúng.
+												//- 			div
+												//- 				div
+												//- 					img(style='height:50px;width:180px;display:block;')
+												//- 					a.rcRefreshImage(style='display:block;') Hình ảnh mới
+												//- 			input(type='hidden', autocomplete='off')
+												//- 	div(style='display:none;', role='status', aria-hidden='true')
+												//- 		img(src='/Data/SiteImages/indicators/indicator1.gif', alt=' ')
+												.form-group.frm-btnwrap
+													label.label  
+													.frm-btn
+														input.btn.btn-default.frm-btn-submit(type='submit', value='Gửi')
+														input(type='hidden')
+												.clear
+	.backtotop
+		.v-align
+			img(src='./img/backtotop.svg')
+			span TOP
