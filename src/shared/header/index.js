@@ -28,4 +28,26 @@ $(document).ready(function () {
 			$(this).toggleClass('transformActive')
 		})
 	})
+	$('.backtotop').on('click', function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1200)
+	})
+	$('.backtotop').css({
+		"bottom": $('footer').height()
+	})
+	var a = $(window).scrollTop() + $(window).height()
+	if (a === $(document).height()) {
+		$('.backtotop').show()
+	} else {
+		$('.backtotop').hide()
+	}
+	$(window).on('scroll', function () {
+		a = $(window).scrollTop() + $(window).height()
+		if (a === $(document).height()) {
+			$('.backtotop').show()
+		} else {
+			$('.backtotop').hide()
+		}
+	})
 });

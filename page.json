@@ -1,9 +1,12 @@
-[
-	{
-		"name": "home",
-		"isWorking": true,
-		"js": [
-			"./bower_components/swiper/dist/js/swiper.min.js"
-		]
-	}
-]
+{
+	"buildAll": false,
+	"page": [
+		{
+			"name": "index",
+			"isWorking": true,
+			"js": [
+				"./bower_components/swiper/dist/js/swiper.min.js"
+			]
+		}
+	]
+}

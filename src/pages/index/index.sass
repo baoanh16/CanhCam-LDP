@@ -1,101 +1,98 @@
 @import ../../components/_core/color.sass
-.progress-bar
-	background: #ff2c00
-	height: 3px
-	z-index: 9999
-	top: 0
-	left: 0
-	width: 0%
-	position: fixed
-	transition: all .1s linear
-	opacity: 0
+
+
 .home-1
 	position: relative
 	color: white
+	height: 767px
 	.background
 		overflow: hidden
 		display: flex
 		justify-content: center
 		align-items: center
 		position: relative
+		height: 100%
 		img
 			width: 100%
 			animation-duration: 9s
 			animation-fill-mode: both
 			animation-timing-function: linear
 			animation-delay: 0.2s
+	.caption
+		transform: translateY(-50%)
+		position: absolute
+		top: 50%
+		left: 0
+		width: 100%
+		.container-large
+			display: flex
+		h1
+			font-weight: 200
+			font-size: 48px
+			line-height: 54px
+			min-width: 640px
+			margin-bottom: 0
+			flex: 0 0 36%
+			letter-spacing: -0.1rem
+			animation-duration: 1.2s
+			animation-fill-mode: both
+			animation-timing-function: ease
+			animation-delay: 1s
 	@media (max-width: 1199.9px)
+		height: unset
 		.caption
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
 			height: 100%
 			display: flex
 			justify-content: center
 			align-items: center
-			h1
-				font-size: 24px
-				line-height: 30px
-				font-weight: 300
-				text-align: center
-	@media (min-width: 1200px)
-		height: 767px
-		.background
-			height: 100%
-		.caption
-			position: absolute
 			top: 0
-			left: 0
-			top: 50%
-			transform: translateY(-50%)
-			.custom-container
-				display: flex
+			transform: unset
+	@media (max-width: 991.9px)
+		.caption
 			h1
-				font-size: 48px
-				line-height: 54px
-				min-width: 640px
-				margin-bottom: 0
-				flex: 0 0 36%
-				letter-spacing: -0.1rem
-				animation-duration: 1.2s
-				animation-fill-mode: both
-				animation-timing-function: ease
-				animation-delay: 1s
-
+				font-size: 28px
+				line-height: 38px
+	@media (max-width: 767.9px)
+		.caption
+			h1
+				min-width: 100%
 .home-2
-	padding: 80px 0
-	text-align: center
+	padding: 45px 0
+	text-align: left
 	position: relative
-	>.row
-		max-width: 1140px
-		margin: 0 auto
-	.title
-		color: #222222
-		font-size: 18px
-		font-weight: 500
-		letter-spacing: 1px
-		text-transform: uppercase
-		line-height: 20px
-		margin-bottom: 20px
-	h2
-		letter-spacing: -0.05rem
-		font-weight: 600
-		max-width: 740px
-		margin: 0 auto
-		margin-bottom: 20px
-		font-size: 40px
-		line-height: 44px
-	p
-		font-size: 18px
-		line-height: 26px
-		font-weight: 300
-		margin: 0 auto
-		margin-top: 10px
-		margin-bottom: 20px
-		max-width: 730px
-		strong, p
-			font-weight: 700
+	@media (min-width: 992px)
+		padding: 80px 0
+		text-align: center
+		.textbox
+			max-width: 730px
+			margin: 0 auto
+		h2
+			color: #222222
+			font-size: 18px
+			font-weight: 500
+			letter-spacing: 1px
+			text-transform: uppercase
+			line-height: 20px
+			margin-bottom: 20px
+		h3
+			letter-spacing: -0.05rem
+			font-family: "Barlow"
+			font-weight: 600
+			max-width: 740px
+			margin: 0 auto
+			margin-bottom: 20px
+			font-size: 40px
+			line-height: 44px
+		p
+			font-size: 18px
+			line-height: 26px
+			font-weight: 300
+			margin: 0 auto
+			margin-top: 10px
+			margin-bottom: 20px
+			max-width: 730px
+			strong, p
+				font-weight: 700
 	.background
 		position: absolute
 		bottom: 0
@@ -106,18 +103,21 @@
 		position: absolute
 		left: 40px
 		bottom: 0
-		// transform: translateY(-100%)
 		z-index: 9
 	@media (max-width: 1199.98px)
 		.background
 			width: 300px
 	@media (max-width: 991.9px)
 		padding: 40px 0 90px
+		.title
+			font-size: 14px
+			margin-bottom: 5px
 		h2
-			font-size: 20px
-			line-height: 24px
+			font-size: 30px
+			line-height: 30px
 		p
 			text-align: justify
+			font-size: 16px
 		.drone
 			display: none
 		.background
@@ -151,51 +151,47 @@
 			font-size: 24px
 			font-weight: 900
 .home-3
-	background-size: cover
-	background-repeat: no-repeat
-	background-attachment: fixed
-	display: flex
-	align-items: center
-	.caption
+	color: white
+	background: #6AB4DC
+	.textbox
 		width: 640px
-		color: white
-		@media (max-width: 1199.9px)
-			max-width: 50%
-		.title
+		h2
 			letter-spacing: -0.05rem
 			font-weight: 600
-			max-width: 740px
 			margin-bottom: 20px
 			font-size: 40px
 			line-height: 44px
-		ul, p
+		ul, li, p
 			font-weight: 300
 			font-size: 24px
 			line-height: 30px
-			li
-				margin-bottom: 14px
+		li, p
+			margin-bottom: 14px
+			&:last-child
+				margin-bottom: 0
 		strong
 			font-weight: 700
+	.container-large
+		padding: 45px 0
+	@media (min-width: 992px)
+		padding: 0 0
+		display: flex
+		align-items: center
+		.container-large
+			padding: 0 15px
+		.bg-mobile
+			display: none
 	
-	@media (max-width: 991.9px)
-		background-position: center!important
-		padding: 40px 0 90px
-		.caption
-			.title
-				font-size: 20px
-				line-height: 24px
-			ul, p
-				font-weight: 300
-				font-size: 20px
-				line-height: 26px
 .home-4
 	padding: 80px 0px
 	text-align: center
-	.custom-container
+	.container-large
 		.row
 			justify-content: center
 			max-width: 1140px
 			margin: 0 auto
+			.col-12
+				padding: 0 0
 			&:nth-child(2)
 				padding: 30px 0px 0px
 	h2
@@ -233,6 +229,8 @@
 					font-weight: 400
 					margin-top: 10px
 					margin-bottom: 10px
+	@media (max-width: 991.9px)
+		padding: 40px 0px
 .home-5
 	padding: 80px 0px
 	display: block
@@ -248,6 +246,8 @@
 		.row
 			max-width: 1440px
 			margin: 0 auto
+			.col-12
+				padding: 0 0
 		.swiper-container
 			.swiper-slide
 				padding: 20px 30px
@@ -361,6 +361,19 @@
 			line-height: 26px
 			font-weight: 300
 			margin: 10px auto
+		.col-md-6
+			@media (max-width: 767.98px)
+				flex: 0 0 100%
+				max-width: 100%
+	.col-lg-4
+		@media (max-width: 991.988px)
+			flex: 0 0 100%
+			max-width: 100%
+			margin-bottom: 20px
+	.col-lg-8
+		@media (max-width: 991.988px)
+			flex: 0 0 100%
+			max-width: 100%
 	.frm-btnwrap
 		label
 			display: none

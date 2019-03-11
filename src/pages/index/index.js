@@ -15,12 +15,18 @@ $(document).ready(function () {
 	$(".f_1").css({
 		"background-position": "0 -100%",
 	})
-	$('.home-3').each(function () {
-		$(this).css({
-			"min-height": $(window).height()
-		})
-	})
 
+	if ($(window).width() > 992) {
+		$('.home-3').each(function () {
+			$(this).css({
+				"min-height": $(window).height()
+			})
+		})
+	} else {
+		$('.home-3').each(function () {
+			$(this).attr('style', "")
+		})
+	}
 	var scrollHeight, ProgressPercent;
 	function setSlider(cb) {
 		let ldpSlider = new Swiper('.home-5 .swiper-container', {
@@ -34,6 +40,16 @@ $(document).ready(function () {
 			navigation: {
 				nextEl: '.home-5 .swiper-container .swiper-button-next',
 				prevEl: '.home-5 .swiper-container .swiper-button-prev',
+			},
+			breakpoints: {
+				992: {
+					slidesPerView: 2,
+
+				},
+				576: {
+					slidesPerView: 1,
+
+				}
 			}
 		})
 		cb()
@@ -53,17 +69,22 @@ $(document).ready(function () {
 
 
 	$(window).resize(function () {
-		$('.home-3').each(function () {
-			$(this).css({
-				"min-height": $(window).height()
+		if ($(window).width() > 992) {
+			$('.home-3').each(function () {
+				$(this).css({
+					"min-height": $(window).height()
+				})
 			})
-		})
+		} else {
+			$('.home-3').each(function () {
+				$(this).attr('style', "")
+			})
+		}
 	})
 
 	$(window).scroll(function () {
 		// Progress Bar
 		let ProgressPercent = Math.round($(window).scrollTop() / scrollHeight * 100)
-		console.log(scrollHeight, ProgressPercent)
 		$('#progress-bar').css({
 			"width": ProgressPercent + "%"
 		})
@@ -89,4 +110,35 @@ $(document).ready(function () {
 			currentPosition = $(window).scrollTop()
 		}
 	})
+
+	// Initialize Parallax
+
+	$('.home-5.f_1').parallax({
+		imageSrc: "/img/bg_wood1.jpg",
+		speed: .1
+	})
+	if ($(window).width() > 992) {
+		$('.home-3.f_1').parallax({
+			imageSrc: "/img/bg_brand01.jpg",
+			speed: .2
+		})
+		$('.home-3.f_2').parallax({
+			imageSrc: "/img/bg_brand02.jpg",
+			speed: .2
+		})
+		$('.home-3.f_3').parallax({
+			imageSrc: "/img/bg_brand03.jpg",
+			speed: .2
+		})
+		$('.home-3.f_4').parallax({
+			imageSrc: "/img/bg_brand04.jpg",
+			speed: .2
+		})
+		$('.home-2.f_2').parallax({
+			imageSrc: "/img/bg_wood2.jpg",
+			speed: .2
+		})
+	} else {
+		$('.parallax-mirror').remove()
+	}
 })

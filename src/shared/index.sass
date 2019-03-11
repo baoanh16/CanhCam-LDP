@@ -41,12 +41,27 @@
 
 .zoomIn
 	animation-name: zoomIn
-// Css
-ul
-	padding-left: 0
-	list-style-type: none
-	margin-bottom: 0
 
+
+// Grid
+.container-large
+	@media (min-width: 1800px)
+		width: 100%
+		margin-right: auto
+		margin-left: auto
+		padding-right: 15px
+		padding-left: 15px
+		max-width: 1740px
+.container-medium
+	@media (min-width: 1600px)
+		width: 100%
+		margin-right: auto
+		margin-left: auto
+		padding-right: 15px
+		padding-left: 15px
+		max-width: 1470px
+[class^="col-"], .col
+	padding: 0 15px
 .col-12
 	flex: 0 0 100%
 	max-width: 100%
@@ -66,14 +81,34 @@ ul
 		flex: 0 0 33.3333%
 		max-width: 33.3333%
 		padding: 0 15px
-main
-	overflow-x: hidden
-	@media (max-width: 1199.9px)
-		padding-top: 80px
+
+// Css
+.home-2,.home-3,.home-5
+	@media (max-width: 576px)
+		background-attachment: unset!important
+
+.bg-mobile
+	@media (min-width: 992px)
+		display: none
+
 body
 	&.over-hidden
 		@media (max-width: 1199.9px)
 			overflow: hidden
+
+img
+	width: 100%
+
+main
+	overflow-x: hidden
+	@media (max-width: 1199.9px)
+		padding-top: 80px
+
+ul
+	padding-left: 0
+	list-style-type: none
+	margin-bottom: 0
+
 .main-nav-toggle
 	display: none
 	@media (max-width: 1199.9px)
@@ -146,3 +181,14 @@ body
 		color: #fff
 		font-size: 12px
 		text-align: center
+
+.progress-bar
+	background: #ff2c00
+	height: 3px
+	z-index: 9999
+	top: 0
+	left: 0
+	width: 0%
+	position: fixed
+	transition: all .15s linear
+	opacity: 0
