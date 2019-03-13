@@ -196,9 +196,7 @@ gulp.task('globalCss', function () {
 singleTaskHtml.forEach(function (number) {
 	gulp.task('html:' + ArrayHtml[number].name, function () {
 		return gulp.src('./src/pages/' + ArrayHtml[number].name + '/index.pug')
-			.pipe(pug({
-				pretty: '\t',
-			}))
+			.pipe(pug())
 			.pipe(rename({
 				basename: ArrayHtml[number].name,
 			}))

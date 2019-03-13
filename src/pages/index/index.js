@@ -6,7 +6,9 @@ $(document).ready(function () {
 	var startPoint = $(".f_1").offset().top - $(window).height() - 120
 	var endPoint = $(".f_1").offset().top + 120
 	// write function
-
+	setTimeout(() => {
+		$('.home-1 .caption').addClass('animation-active')
+	}, 1500);
 	$(".home-1 .background img").addClass("zoomIn")
 	let percent = Math.round(($(window).scrollTop() - startPoint) / ($(window).height() + 240) * 10000) / 100
 	$(".drone").css({
@@ -112,33 +114,33 @@ $(document).ready(function () {
 	})
 
 	// Initialize Parallax
+	setTimeout(() => {
 
-	$('.home-5.f_1').parallax({
-		imageSrc: "/img/bg_wood1.jpg",
-		speed: .1
-	})
+		$('.home-5.f_1').parallax({
+			imageSrc: "./img/bg_wood1.jpg",
+			speed: .1
+		})
+	}, 1000);
 	if ($(window).width() > 992) {
 		$('.home-3.f_1').parallax({
-			imageSrc: "/img/bg_brand01.jpg",
+			imageSrc: "./img/bg_brand01.jpg",
 			speed: .2
 		})
 		$('.home-3.f_2').parallax({
-			imageSrc: "/img/bg_brand02.jpg",
+			imageSrc: "./img/bg_brand02.jpg",
 			speed: .2
 		})
 		$('.home-3.f_3').parallax({
-			imageSrc: "/img/bg_brand03.jpg",
+			imageSrc: "./img/bg_brand03.jpg",
 			speed: .2
 		})
 		$('.home-3.f_4').parallax({
-			imageSrc: "/img/bg_brand04.jpg",
+			imageSrc: "./img/bg_brand04.jpg",
 			speed: .2
 		})
 		$('.home-2.f_2').parallax({
-			imageSrc: "/img/bg_wood2.jpg",
+			imageSrc: "./img/bg_wood2.jpg",
 			speed: .2
 		})
-	} else {
-		$('.parallax-mirror').remove()
 	}
 })
