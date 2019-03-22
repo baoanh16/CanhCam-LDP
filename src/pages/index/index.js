@@ -3,14 +3,15 @@
 $(document).ready(function () {
 	// Define variables
 	var currentPosition = 0
-	var startPoint = $(".f_1").offset().top - $(window).height() - 120
-	var endPoint = $(".f_1").offset().top + 120
+	var startPoint = $(".home-3.f_1").offset().top - $(window).height() - 120
+	var endPoint = $(".home-3.f_1").offset().top + 120
 	// write function
 	setTimeout(() => {
 		$('.home-1 .caption').addClass('animation-active')
 	}, 1500);
 	$(".home-1 .background img").addClass("zoomIn")
 	let percent = Math.round(($(window).scrollTop() - startPoint) / ($(window).height() + 240) * 10000) / 100
+	
 	$(".drone").css({
 		"bottom": (percent) + "%",
 	})
@@ -90,11 +91,10 @@ $(document).ready(function () {
 		$('#progress-bar').css({
 			"width": ProgressPercent + "%"
 		})
-
 		// Scroll up
 		if ($(window).scrollTop() > currentPosition) {
 			if ($(window).scrollTop() >= startPoint && $(window).scrollTop() <= endPoint) {
-				let percent = Math.round(($(window).scrollTop() - startPoint) / ($(window).height() + 240) * 10000) / 100
+				let percent = Math.round(($(window).scrollTop() - startPoint) / ($(window).height() + 240) * 10000 * 2) / 100
 				$(".drone").css({
 					"bottom": (percent) + "%",
 				})

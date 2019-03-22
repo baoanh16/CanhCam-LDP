@@ -61,10 +61,12 @@
 		.caption
 			h1
 				font-size: 28px
+				text-align: center
 				line-height: 38px
 	@media (max-width: 767.9px)
 		.caption
 			h1
+				font-size: 20px
 				min-width: 100%
 .home-2
 	padding: 45px 0
@@ -91,12 +93,11 @@
 			margin-bottom: 20px
 		h3
 			letter-spacing: -0.05rem
-			font-family: "Barlow"
-			font-weight: 600
+			font-weight: 200
 			max-width: 740px
 			margin: 0 auto
 			margin-bottom: 20px
-			font-size: 40px
+			font-size: 48px
 			line-height: 44px
 		p
 			font-size: 18px
@@ -128,7 +129,7 @@
 			font-size: 14px
 			margin-bottom: 5px
 		h3
-			font-size: 30px
+			font-size: 26px
 			line-height: 30px
 			margin-bottom: 10px
 		p
@@ -180,14 +181,22 @@
 	@media (max-width: 991.9px)
 		background: #6AB4DC
 	.textbox
-		width: 640px
+		width: 720px
 		max-width: 100%
+		h3
+			color: white
+			font-size: 18px
+			font-weight: 500
+			letter-spacing: 1px
+			text-transform: uppercase
+			line-height: 20px
+			margin-bottom: 14px
 		h2
 			letter-spacing: -0.05rem
 			font-weight: 600
 			margin-bottom: 20px
-			font-size: 40px
-			line-height: 44px
+			font-size: 36px
+			line-height: 40px
 		ul, li, p
 			font-weight: 300
 			font-size: 24px
@@ -200,7 +209,7 @@
 			font-weight: 700
 		@media (max-width: 991.9px)
 			h2
-				font-size: 30px
+				font-size: 26px
 				margin-bottom: 15px
 				line-height: 34px
 			ul, li, p
@@ -227,34 +236,61 @@
 			padding: 0 15px
 		.bg-mobile
 			display: none
+	&.f_4
+		.textbox
+			width: 640px
+			max-width: 100%
+			.number
+				display: flex
+				flex-wrap: wrap
+				padding-top: 30px
+				margin: 0 -15px
+				.item
+					padding: 0 15px
+					flex: 0 0 25%
+					max-width: 25%
+					h5
+						font-weight: 700
+						letter-spacing: -0.1rem
+						margin-bottom: 20px
+						font-size: 48px
+						line-height: 54px
+					span
+						font-style: italic
+						font-size: 18px
+						line-height: 22px
+						transition: all 0.3s ease
+						color: #fff
+				@media (max-width: 991.9px)
+					.item
+						flex: 0 0 50%
+						max-width: 50%
+						margin-bottom: 15px
+						h5
+							font-size: 40px
+						span
+							font-size: 16px
 .home-4
 	padding: 80px 0px
 	text-align: center
-	// .container-large
-	// 	.row
-	// 		justify-content: center
-	// 		max-width: 1140px
-	// 		margin: 0 auto
-	// 		.col-12
-	// 			padding: 0 0
-	// 		&:nth-child(2)
-	// 			padding: 30px 0px 0px
+	.textbox
+		max-width: 730px
+		margin: 0 auto
 	h2
-		font-weight: 200
 		letter-spacing: -0.1rem
 		margin-bottom: 20px
-		font-size: 48px
-		line-height: 54px
+		font-weight: 400
+		font-size: 30px
+		line-height: 36px
 		@media (max-width: 991.9px)
-			font-size: 30px
+			font-size: 26px
 			line-height: 34px
 	p
+		margin: 10px auto 20px auto
+		max-width: 100%
 		font-size: 18px
 		line-height: 26px
 		font-weight: 300
-		margin: 10px auto 20px auto
-		width: 730px
-		max-width: 100%
 		@media (max-width: 991.9px)
 			font-size: 16px
 			line-height: 22px
@@ -298,6 +334,7 @@
 		font-size: 48px
 		line-height: 54px
 		text-align: center
+		color: #0a0a0a
 		@media (max-width: 991.9px)
 			font-size: 30px
 			margin-bottom: 15px
@@ -321,6 +358,8 @@
 					display: flex
 					justify-content: center
 					align-items: center
+					&:focus
+						outline: none
 					&:before
 						display: inline-block
 						font: normal normal normal 24px/1 "Material Design Icons"
@@ -339,18 +378,24 @@
 					&:before
 						content: '\f142'
 	&.f_2
+		.row
+			@media (max-width: 767.9px)
+				margin: 0 -8px
 		.item
-			flex: 0 0 50%
-			max-width: 50%
-			padding: 15px
+			flex: 0 0 33.3333%
+			max-width: 33.3333%
+			padding: 0 8px
+			margin-bottom: 16px
 			img
 				width: 100%
-			@media (min-width: 576px)
-				flex: 0 0 33.3333%
-				max-width: 33.3333%
+			// @media (min-width: 576px)
+			// 	flex: 0 0 33.3333%
+			// 	max-width: 33.3333%
 			@media (min-width: 768px)
 				flex: 0 0 25%
 				max-width: 25%
+				padding: 0 15px
+				margin-bottom: 20px
 			@media (min-width: 922px)
 				flex: 0 0 16.6666%
 				max-width: 16.6666%
