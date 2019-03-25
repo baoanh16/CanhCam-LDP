@@ -143,4 +143,13 @@ $(document).ready(function () {
 			speed: .2
 		})
 	}
+	var testimonial = new Swiper('.home-2.f_2 .swiper-container',{
+		slidesPerView: 1,
+		loop: true,
+		speed: 1000,
+		autoplay:{
+			delay: 4000,
+			disableOnInteraction: false,
+		}
+	})
 })

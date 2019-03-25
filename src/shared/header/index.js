@@ -1,4 +1,11 @@
 $(document).ready(function () {
+	var moveLogo = new MappingListener({
+		selector: '.ldp-header .logo',
+		desktopWrapper: '.ldp-header .main-nav',
+		desktopMethod: 'insertBefore',
+		mobileWrapper: '.ldp-header .main-nav-toggle',
+		mobileMethod:'insertBefore'
+	}).watch(1200)
 	var menuIsToggled = false;
 	if ($(window).width() >= 1200) {
 		$(".ldp-header").addClass("fadeInDown")
