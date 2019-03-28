@@ -5,6 +5,9 @@
 	position: relative
 	color: white
 	height: 767px
+	.background-mobile
+		@media (min-width: 992px)
+			display: none
 	.background
 		overflow: hidden
 		display: flex
@@ -12,6 +15,8 @@
 		align-items: center
 		position: relative
 		height: 100%
+		@media (max-width: 991.9px)
+			display: none
 		img
 			width: 100%
 			animation-duration: 9s
@@ -58,19 +63,35 @@
 				transition: all .4s linear
 				opacity: 1
 	@media (max-width: 991.9px)
-		background: black
+		.background-mobile
+			background: black
+			img
+				opacity: .6
 		.background
-			opacity: .6
+			background: black
+			img
+				opacity: .6
 		.caption
 			h1
 				font-size: 28px
 				text-align: center
 				line-height: 1.5
+				margin-top: 500px
 	@media (max-width: 767.9px)
+		.caption
+			h1
+				font-size: 24px
+				min-width: 100%
+				margin-top: 400px
+	
+	@media (max-width: 575.9px)
 		.caption
 			h1
 				font-size: 20px
 				min-width: 100%
+				margin-top: 250px
+	
+
 .home-2
 	padding: 45px 0
 	text-align: center

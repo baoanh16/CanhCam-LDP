@@ -10,6 +10,8 @@ block main
 	section.home-1
 		.background
 			img(src="./img/bg_banner.jpg", alt="")
+		.background-mobile
+			img(src="./img/mb_bg_banner.jpg", alt="")
 		.caption
 			.container-large
 				h1 Chúng tôi là chuyên gia tạo ra website bán hàng Hiệu quả giúp doanh nghiệp gia tăng đơn hàng và tỷ lệ khách hàng trung thành
@@ -35,7 +37,7 @@ block main
 					li + 3 Bước mua hàng cực kì đơn giản
 					li + Thiết kế thân thiện với mọi thiết bị di động
 		.bg-mobile
-			img(src="./img/bg_brand01.jpg", alt="")
+			img(src="./img/mb_bg_brand01.jpg", alt="")
 	section#target-3.home-3.f_2
 		.container-large
 			.textbox
@@ -46,7 +48,7 @@ block main
 					li + Gia tăng tỷ lệ chuyển đổi khách hàng
 					li + Nâng cao lòng trung thành thương hiệu của khách hàng
 		.bg-mobile
-			img(src="./img/bg_brand02.jpg", alt="")
+			img(src="./img/mb_bg_brand02.jpg", alt="")
 	section#target-4.home-3.f_3
 		.container-large
 			.textbox
@@ -59,7 +61,7 @@ block main
 					li + Tích hợp các phần mềm nhanh chóng
 					li + Dễ dàng chuyển đổi thành Mobile App
 		.bg-mobile
-			img(src="./img/bg_brand03.jpg", alt="")
+			img(src="./img/mb_bg_brand03.jpg", alt="")
 	section#target-5.home-4
 		.container
 			.textbox
@@ -105,7 +107,7 @@ block main
 						h5 14%
 						span tăng doanh số năm tiếp theo
 		.bg-mobile
-			img(src="./img/bg_brand04.jpg", alt="")
+			img(src="./img/mb_bg_brand04.jpg", alt="")
 	section.home-5.f_1
 		.container-medium
 			.row
@@ -130,9 +132,9 @@ block main
 		.container
 			h2 Khách hàng của Cánh Cam
 			.row
-				- for(i = 0;i<30;i++)
+				- for(i = 1;i<28;i++)
 					.item
-						img(src="./img/partner.png", alt="")
+						img(src="./img/"+i+".jpg", alt="")
 	section.home-2.f_2
 		.container
 			h2 Testimonial
