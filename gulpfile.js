@@ -4,6 +4,7 @@ pug = require('gulp-pug')
 Fiber = require('fibers')
 sass = require('gulp-sass')
 cssnano = require('cssnano')
+data = require('gulp-data')
 babel = require('gulp-babel')
 uglify = require('gulp-terser')
 concat = require('gulp-concat')
@@ -194,8 +195,12 @@ gulp.task('globalCss', function () {
 
 // Start task Html
 singleTaskHtml.forEach(function (number) {
+	var dataFile = './pagelist.json';
 	gulp.task('html:' + ArrayHtml[number].name, function () {
 		return gulp.src('./src/pages/' + ArrayHtml[number].name + '/index.pug')
+			.pipe(data(function () {
+				return JSON.parse(readFileSync(dataFile));
+			}))
 			.pipe(pug())
 			.pipe(rename({
 				basename: ArrayHtml[number].name,

@@ -116,15 +116,10 @@ block main
 				.col-12
 					.swiper-container
 						.swiper-wrapper
-							.swiper-slide
-								a(href="#")
-									img(src="./img/tip1.png", alt="")
-							.swiper-slide
-								a(href="#")
-									img(src="./img/tip2.png", alt="")
-							.swiper-slide
-								a(href="#")
-									img(src="./img/tip3.png", alt="")
+							each link, index in list2
+								.swiper-slide
+									a(href=link, target="_blank")
+										img(src="./img/tip"+(index+1)+".png", alt="")
 						.swiper-navigation
 							.swiper-button-prev
 							.swiper-button-next
@@ -132,9 +127,10 @@ block main
 		.container
 			h2 Khách hàng của Cánh Cam
 			.row
-				- for(i = 1;i<28;i++)
+				each link, index in list
 					.item
-						img(src="./img/"+i+".jpg", alt="")
+						a(href=link, target="_blank")
+							img(src="./img/"+(index+1)+".jpg", alt="")
 	section.home-2.f_2
 		.container
 			h2 Testimonial
