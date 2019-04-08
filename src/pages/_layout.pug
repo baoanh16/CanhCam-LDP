@@ -3,16 +3,44 @@ block var
 doctype html
 html(lang="en")
 	head
+		title Dịch Vụ Thiết Kế Website Bán Hàng Online Chuyên Nghiệp
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Barlow:200,300,300i,400,400i,500,600,700&amp;subset=vietnamese")
+		meta(name='title', content='Dịch Vụ Thiết Kế Website Bán Hàng Online Chuyên Nghiệp')
+		meta(name='description', content='Hơn 12 Năm Kinh Nghiệm ⚡️ Dịch Vụ Thiết Kế Website Bán Hàng Online Chuyên Nghiệp. ✅ Web Bán Hàng Trực Tuyến ⭐ Hiệu Quả Cao ⭐ Chi Phí Thấp ⭐ Giá Ưu Đãi')
+		// Open Graph / Facebook
+		meta(property='og:type', content='website')
+		meta(property='og:url', content='https://www.canhcam.vn/thiet-ke-website-ban-hang/')
+		meta(property='og:title', content='Dịch Vụ Thiết Kế Website Bán Hàng Online Chuyên Nghiệp')
+		meta(property='og:description', content='Hơn 12 Năm Kinh Nghiệm ⚡️ Dịch Vụ Thiết Kế Website Bán Hàng Online Chuyên Nghiệp. ✅ Web Bán Hàng Trực Tuyến ⭐ Hiệu Quả Cao ⭐ Chi Phí Thấp ⭐ Giá Ưu Đãi')
+		meta(property='og:image', content='#')
+		// Twitter
+		meta(property='twitter:card', content='summary_large_image')
+		meta(property='twitter:url', content='https://www.canhcam.vn/thiet-ke-website-ban-hang/')
+		meta(property='twitter:title', content='Dịch Vụ Thiết Kế Website Bán Hàng Online Chuyên Nghiệp')
+		meta(property='twitter:description', content='Hơn 12 Năm Kinh Nghiệm ⚡️ Dịch Vụ Thiết Kế Website Bán Hàng Online Chuyên Nghiệp. ✅ Web Bán Hàng Trực Tuyến ⭐ Hiệu Quả Cao ⭐ Chi Phí Thấp ⭐ Giá Ưu Đãi')
+		meta(property='twitter:image', content='#')
+		// Google Tag Manager
+		script.
+			(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+			'gtm.start':
+			new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+			'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-W4X92M');
+		// End Google Tag Manager
 		link(rel="shortcut icon", href="/canhcam/favicon.ico", type="image/x-icon")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Barlow:200,300,300i,400,400i,500,600,700&amp;subset=vietnamese")
 		link(rel="stylesheet", href="./css/global.min.css")
 		link(rel="stylesheet", href="./css/"+path+".min.css")
-		title #{title}
 
 	body(class=bodyClass)
+		// Google Tag Manager (noscript)
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4X92M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		// End Google Tag Manager (noscript)
 		block header
 			include ../shared/header/index.pug
 		main

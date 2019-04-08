@@ -82,7 +82,7 @@ block main
 					figure
 						img(src="./img/icon_3.png", alt="")
 						figcaption
-							h4 Kết nối Erp, CRM
+							h4 Kết nối ERP, CRM
 				.item
 					figure
 						img(src="./img/icon_4.png", alt="")
@@ -93,22 +93,22 @@ block main
 			.textbox
 				h2 Những con số biết nói chứng minh cho hiệu quả thực tế
 				p Với hơn 1200 đơn hàng online trong 1 tháng, tỷ lệ kênh online chiếm 38%, doanh số 3,5 tỷ mỗi tháng và liên tục tăng 14% ở năm tiếp theo là những con số cụ thể chỉ sau một thời gian ngắn vận hành của Sonycenter.vn - Website đầu tiên về e-commerce của Sony Việt Nam.
-				.number
+				.number.data-count
 					.item
-						h5 1200+
+						h5(data-count="1200" data-unit="+") 1200+
 						span đơn hàng online/ tháng
 					.item
-						h5 38%
+						h5(data-count="38" data-unit="%") 38%
 						span tỷ lệ kênh online
 					.item
-						h5 3,5 tỷ
+						h5(data-count="3.5" data-unit="tỷ") 3,5 tỷ
 						span doanh số mỗi tháng
 					.item
-						h5 14%
+						h5(data-count="14" data-unit="%") 14%
 						span tăng doanh số năm tiếp theo
 		.bg-mobile
 			img(src="./img/mb_bg_brand04.jpg", alt="")
-	section.home-5.f_1
+	section.home-5.f_1#target-6
 		.container-medium
 			.row
 				.col-12
@@ -133,7 +133,7 @@ block main
 							img(src="./img/"+(index+1)+".jpg", alt="")
 	section.home-2.f_2
 		.container
-			h2 Testimonial
+			h2 Cảm nhận khách hàng
 			san.mdi.mdi-quote-close
 			.swiper-container
 				.swiper-wrapper
@@ -146,19 +146,33 @@ block main
 								| Sony Center Management - South Sales Dept.
 					.swiper-slide
 						.textbox
-							h3 Nền tảng kỹ thuật của website SonyCenter được xây dựng vững, nên rất ít khi có lỗi, đặc biệt về mặt bảo mật, web luôn đáp ứng được chuẩn cao nhất từ tập đoàn Sony đề ra khi vận hành website e-commerce. Ngoài ra, đội ngũ Cánh Cam đã đáp ứng tốt những hỗ trợ về kỹ thuật &amp; tư vấn vận hành, việc này giúp website ổn định, xử lý sự cố được nhanh chóng, đảm bảo sự hài lòng cho khách hàng của chúng tôi.
+							h3 “Nền tảng giao diện thương mại điện tử mới đã và đang giúp chúng tôi tiếp cận nhiều khách hàng hơn với hơn 50.000 đơn hàng đặt online mỗi năm. Bên cạnh đó, những dịch vụ hỗ trợ, nâng cấp website cũng được Cánh Cam xử lý nhanh chóng, đảm bảo quy trình mua hàng của khách hàng Domino Pizza luôn hiệu quả.”
 							span ...
 							p
-								strong Lý Anh Quân 
-								| Sony Center Management - South Sales Dept.
+								strong Trần Minh Phong 
+								| Domino Pizza - IT Manager
 					.swiper-slide
 						.textbox
-							h3 Nền tảng kỹ thuật của website SonyCenter được xây dựng vững, nên rất ít khi có lỗi, đặc biệt về mặt bảo mật, web luôn đáp ứng được chuẩn cao nhất từ tập đoàn Sony đề ra khi vận hành website e-commerce. Ngoài ra, đội ngũ Cánh Cam đã đáp ứng tốt những hỗ trợ về kỹ thuật &amp; tư vấn vận hành, việc này giúp website ổn định, xử lý sự cố được nhanh chóng, đảm bảo sự hài lòng cho khách hàng của chúng tôi.
+							h3 “Tốt - Ổn định- Hiệu quả” là những điều chúng tôi nói về Cánh Cam khi thực hiện website của Twin. http://twin.vn/  đã được khách hàng và đối tác của Twin đánh giá cao ngay từ ngày vận hành đầu tiên”
 							span ...
 							p
-								strong Lý Anh Quân 
-								| Sony Center Management - South Sales Dept.
-	section.contact
+								strong Nguyễn Hiếu Hậu 
+								| Twin - Co-Founder &amp; Business Development Director
+					.swiper-slide
+						.textbox
+							h3 “Website Mr.Vui giúp chúng tôi mở rộng phạm vi kinh doanh tốt hơn. Không chỉ hoạt động hiệu quả về mặt doanh số, website bán hàng còn giúp tăng khả năng nhận diện thương hiệu Mr.Vui một cách đáng kể với khách hàng trên internet.”
+							span ...
+							p
+								strong Phan Thanh Nghi 
+								| Mr.Vui - Business Development Director
+					.swiper-slide
+						.textbox
+							h3 “Doanh thu online đã tăng một cách vượt bậc chỉ sau một thời gian ngắn sử dụng, khách hàng có thể tương tác hoàn toàn dễ dàng với những bước mua hàng vô cùng đơn giản trên website Ecommerce của Cánh Cam là kết quả thực tế về sự lựa đúng đắn của Samsonite.”
+							span ...
+							p
+								strong KHANH NGUYEN, Ms.
+								| Samsonite - Business Development Manager
+	section.contact#target-7
 		.container
 			.row
 				.col-lg-4
@@ -177,25 +191,25 @@ block main
 										.form-wrapper.row
 											.col-md-6
 												.form-group.qtext.require
-													input(placeholder='Họ và tên...')
+													input(placeholder='Họ và tên (*)...')
 													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Họ và tên....
 												.form-group.qtext.require
-													input(placeholder='Email...')
+													input(placeholder='Email (*)...')
 													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Email....
 												.form-group.qtext.require
-													input(placeholder='Số điện thoại...')
+													input(placeholder='Số điện thoại (*)...')
 													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Số điện thoại....
 												.form-group.qtext.require
 													select
-														option(value="") Bạn biết đến cánh cam như thế nào?
-														option(value="") Bạn biết đến cánh cam như thế nào?
-														option(value="") Bạn biết đến cánh cam như thế nào?
-														option(value="") Bạn biết đến cánh cam như thế nào?
-														option(value="") Bạn biết đến cánh cam như thế nào?
+														option(value="") Bạn biết đến Cánh Cam như thế nào?
+														option(value="") Giới thiệu
+														option(value="") Google
+														option(value="") Fadebook
+														option(value="") Khác
 													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Tiêu đề....
 											.col-md-6
 												.form-group.qparagraph.require
-													textarea(placeholder='Nội dung...')
+													textarea(placeholder='Nội dung (*)...')
 													span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Nội dung....
 												.form-group.qparagraph.require
 													p * Vui lòng điền vào tất cả các trường được đánh dấu *
@@ -207,5 +221,5 @@ block main
 												.clear
 	.backtotop
 		.v-align
-			img(src='./img/backtotop.svg')
+			//- img(src='./img/backtotop.svg')
 			span TOP

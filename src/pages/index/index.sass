@@ -73,23 +73,23 @@
 				opacity: .6
 		.caption
 			h1
-				font-size: 28px
+				font-size: 32px
 				text-align: center
 				line-height: 1.5
 				margin-top: 500px
 	@media (max-width: 767.9px)
 		.caption
 			h1
-				font-size: 24px
+				font-size: 29px
 				min-width: 100%
 				margin-top: 400px
 	
 	@media (max-width: 575.9px)
 		.caption
 			h1
-				font-size: 20px
+				font-size: 26px
 				min-width: 100%
-				margin-top: 250px
+				margin-top: 200px
 	
 
 .home-2
@@ -101,7 +101,7 @@
 		margin-top: 12px
 		img
 			margin: auto
-			width: unset
+			width: auto
 	h2
 		font-weight: 500
 		letter-spacing: 1px
@@ -270,7 +270,7 @@
 			background: #db3f20
 	&.f_2
 		@media (max-width: 991.9px)
-			background: #4fbbd5
+			background: #51bdd7
 	&.f_3
 		@media (max-width: 991.9px)
 			background: #7f716b
@@ -391,6 +391,10 @@
 					overflow: hidden
 					width: 100%
 					box-shadow: 0 0 20px rgba(0,0,0,.2)
+					transition: all .3s ease-out
+				&:hover
+					img
+						transform: scale(1.05)
 			.swiper-navigation
 				[class*="swiper-button-"]
 					background: none
@@ -420,6 +424,8 @@
 					&:before
 						content: '\f142'
 	&.f_2
+		h2
+			margin-bottom: 35px
 		.row
 			@media (max-width: 767.9px)
 				margin: 0 -8px
@@ -430,6 +436,7 @@
 			margin-bottom: 16px
 			img
 				width: 100%
+				transition: all .3s ease-out
 			// @media (min-width: 576px)
 			// 	flex: 0 0 33.3333%
 			// 	max-width: 33.3333%
@@ -441,9 +448,15 @@
 			@media (min-width: 922px)
 				flex: 0 0 16.6666%
 				max-width: 16.6666%
+				&:hover
+					img
+						transform: scale(1.05)
+						box-shadow: 0 0 5px map-get($mau, main)
 .contact
 	padding: 80px 0px
 	background-image: url(../img/bg_creammarble.jpg)
+	@media (max-width: 991.9px)
+		padding: 40px 0
 	h2 
 		font-weight: 200
 		letter-spacing: -0.1rem
@@ -471,10 +484,19 @@
 		text-decoration: underline
 		&:hover
 			color: map-get($mau, main)
+	.form-group
+		margin: 0 0 1.7rem
+		position: relative
+		display: flex
+		flex-direction: column
+		.fa-exclamation-triangle
+			color: red
+			font-size: 13px
+			margin-left: auto
+
 	input:not([type="submit"]), select, textarea
 		border-radius: 0px
 		border: 1px solid #2f3033
-		margin: 0 0 1.7rem
 		height: 45px
 		font-size: 13px
 		color: #000000
